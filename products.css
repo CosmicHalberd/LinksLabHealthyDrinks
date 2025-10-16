@@ -1,0 +1,495 @@
+html{
+    font-family: 'Nunito', sans-serif;
+}
+nav {
+  font-family: "Fredoka", sans-serif; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  background-color: #F1F0DB;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+/* -------- Structure -------- */
+.nav-left, .nav-center, .nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left { justify-content: flex-start; }
+.nav-center { justify-content: center; }
+.nav-right { justify-content: flex-end; }
+
+/* -------- Logo / Title -------- */
+nav h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #301E1E;
+  margin: 0;
+}
+
+/* -------- Links -------- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  color: #301E1E;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: #E5465A;
+  text-decoration: wavy underline;
+}
+
+/* -------- Icons -------- */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-right: 200px;
+}
+
+.nav-right{
+  position: relative;
+  right: 150px;
+}
+
+.nav-left{
+  position: relative;
+  left: 150px;
+}
+#cart {
+    width: 22px;
+    height: 22px;
+    filter: invert(1);
+    display: block;
+}
+
+
+.main-container-bg{
+  background: linear-gradient(180deg, rgba(255, 253, 235, 1), #F4F1ED 100%);
+  padding-bottom: 550px;
+}
+
+.juice-section {
+  padding: 8rem 6rem 10rem;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+.catalogue-title {
+  font-size: 2.5rem;
+  color: #2a1a09;
+  margin-bottom: 0.4rem;
+}
+
+.catalogue-subtitle {
+  color: rgba(50, 30, 10, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+
+.juice-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+
+.juice-card {
+  width: calc(25% - 2rem);
+  min-width: 260px;
+  text-align: center;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(125, 182, 194, 0.5);
+  background: #f4f1ed;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juice-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(255, 187, 182, 0.7);
+}
+
+/* Image Container */
+.juice-img {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+}
+
+.juice-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.juice-card:hover .juice-img img {
+  transform: scale(1.05);
+}
+
+.juice-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(158, 215, 255, 0.45);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1.5rem;
+}
+
+.juice-card:hover .juice-overlay {
+  opacity: 1;
+}
+
+/* Text */
+.juice-card h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1.5rem;
+  color: rgb(48, 30, 9);
+}
+
+.short-desc {
+  font-size: 1rem;
+  color: rgba(36, 19, 0, 0.8);
+  margin: 0 0 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .juice-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .juice-card {
+    width: 100%;
+  }
+}
+
+/* STAR RATING (robust) */
+.star-rating.static {
+  --rating-percent: 0%;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #ccc; 
+  position: relative;
+  white-space: nowrap; 
+  font-family: "Arial", "Segoe UI Symbol", "Fredoka", sans-serif;
+}
+
+.star-rating.static::before {
+  content: "★★★★★";
+  color: #ccc;
+  letter-spacing: 2px;
+}
+
+.star-rating.static::after {
+  content: "★★★★★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--rating-percent, 0%);
+  overflow: hidden;
+  color: #301E1E;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 2px;
+}
+
+
+.add-to-cart {
+  background-color: #301E1E;
+  color: #F1F0DB;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px; 
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-to-cart:hover {
+  background-color: #F9A239;
+  color: #FFFDF8;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(233, 225, 91, 0.4);
+}
+
+.ice-jelly{
+  background: #a2e5ff;
+}
+
+.ice-jelly:hover{
+  box-shadow: 0 10px 24px rgba(0, 149, 255, 0.7);
+}
+
+.ice-jelly-overlay{
+  background: rgba(24, 48, 82, 0.45);
+}
+
+.rosella-drip{
+  background: #ff9292;
+}
+
+.rosella-drip:hover{
+  box-shadow: 0 10px 24px rgba(120, 0, 0, 0.7);
+}
+
+.rosella-drip-overlay{
+  background: rgba(109, 24, 36, 0.45);
+}
+
+.goji-berry{
+  background: #ff9dc1;
+}
+
+.goji-berry:hover{
+  box-shadow: 0 10px 24px rgba(154, 0, 69, 0.7);
+}
+
+.goji-berry-overlay{
+  background: rgba(107, 13, 79, 0.45);
+}
+
+.pineapple-twist{
+  background: #ffefa1;
+}
+
+.pineapple-twist:hover{
+  box-shadow: 0 10px 24px rgba(211, 208, 13, 0.7);
+}
+
+.pineapple-twist-overlay{
+  background: rgba(129, 113, 6, 0.45);
+}
+
+.cucumber-lime{
+  background: #c9ffa2;
+}
+
+.cucumber-lime:hover{
+  box-shadow: 0 10px 24px rgba(108, 203, 0, 0.7);
+}
+
+.cucumber-lime-overlay{
+  background: rgba(94, 136, 9, 0.45);
+}
+
+.cinammon-brew{
+  background: #ffd187;
+}
+
+.cinammon-brew:hover{
+  box-shadow: 0 10px 24px rgba(119, 58, 0, 0.7);
+}
+
+.cinammon-brew-overlay{
+  background: rgba(108, 58, 8, 0.45);
+}
+
+.overlay-supergraphics-bottom{
+  position: absolute;
+  top: 1312.5px;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  max-width: 40vw;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none; /* so it doesn’t block buttons */
+  z-index: 1;
+}
+
+.overlay-supergraphics {
+  position: absolute;
+  top: 320px;
+  left: -48px;
+  height: 100%;
+  position: absolute;
+  max-width: 40vw;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.graphics-right{
+  position: absolute;
+  top: 470px;
+  left: 1190px;
+  pointer-events: none;
+}
+
+.wave-divider {
+  position: absolute;
+  bottom: 230px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  background: transparent;
+}
+
+.footer {
+  position: relative;
+  background-color: #B8E1EB;
+  color: #301E1E;
+  padding: 3rem 2rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 3rem;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-left h2 {
+  color: #301E1E;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  color: #674545;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  outline: none;
+  background: #fff;
+}
+
+.newsletter-form button {
+  background-color: #E5465A;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.9;
+  background-color: #F9A239;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.footer-links h4 {
+  color: #E5465A;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links ul a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.footer-links ul a:hover {
+  color: #E5465A;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+svg {
+  display: block;
+  margin-bottom: -2px;
+}
+
+.footer img{
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+  transform: scale(1.5);
+}
+
+.gotham{
+  font-family: 'Gotham', sans-serif;
+}
+
+.footer .gotham{
+  font-family: 'Gotham', sans-serif;
+}

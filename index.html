@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Link's Lab</title>
+</head>
+<body>
+    <nav>
+    <div class="nav-left">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./html/products.html">Products</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center">
+        <h3 class="gotham">Link's Lab</h3>
+    </div>
+
+    <div class="nav-right">
+        <ul>
+        <li><a href="./html/about-us.html">About Us</a></li>
+        <li><a href="./html/locations.html" class="btn-nav">Locations</a></li>
+        </ul>
+    </div>
+    </nav>
+    
+    <div class="main-container-bg">
+        <div class="content banner">
+            <div class="banner-inner">
+                <div class="banner-media">
+                    <video autoplay loop muted playsinline>
+                        <source src="./Images/LinksLabReel2.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="banner-text">
+                <h1>Being healthy doesn't have to break the bank!</h1>
+                <p>All-natural, fresh, and practical drinks to stay healthy</p>
+                <button><a href="#juice-cards-section">Begin your journey in health</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content about">
+        <div class="description">
+            <h2>Why Link's Lab?</h2>
+            <p>
+            At Link’s Lab, we believe staying healthy shouldn’t be expensive or boring.
+            Every drink we make is packed with real and natural ingredients, non-artificial sweetness, and a
+            whole lot of love! Because wellness should taste good too.
+            </p>
+        </div>
+        <img src="./Images/ice-jelly-preview.png" alt="Ice Jelly Drink">
+        </div>
+    </div>
+    
+    <div style="background: #B8E1EB;">
+    <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path
+        d="M0,100 C200,20 400,180 720,100 C1040,20 1240,180 1440,100 L1440,200 L0,200 Z"
+        fill="rgba(255, 253, 235, 1)" 
+
+        style="transition: fill .35s linear;">
+        <animate attributeName="d"
+            dur="10s" repeatCount="indefinite"
+            values="
+            M0,100 C200,20 400,180 720,100 C1040,20 1240,180 1440,100 L1440,200 L0,200 Z;
+            M0,80 C200,100 400,60 720,120 C1040,160 1240,40 1440,120 L1440,200 L0,200 Z;
+            M0,100 C200,20 400,180 720,100 C1040,20 1240,180 1440,100 L1440,200 L0,200 Z
+            "/>
+        </path>
+    </svg>
+    </div>
+
+    <div class="juice-section" id="juice-cards-section">
+        <div class="overlay-supergraphics graphics-left"><img src="./Images/home-left-supergraphics.png"></div>
+        <div class="overlay-supergraphics graphics-right"><img src="./Images/home-right-supergraphics.png"></div>
+        <div class="overlay-supergraphics-bottom"><img src="./Images/bottom-supergraphics.png"></div>
+        
+        <section class="juice-carousel">
+        <button class="carousel-btn prev">❮</button>
+        
+        <div class="carousel-track">
+            <!--Ice Jelly-->
+            <div class="juice-card ice-jelly">
+            <div class="juice-img">
+                <img src="./Images/ice-jelly.jpg" alt="Ice Jelly">
+                <div class="juice-overlay ice-jelly-overlay">
+                <p>Brightens your skin, soothes your throat, and cools you down from the inside out.</p>
+                </div>
+            </div>
+
+            <h3>Ice Jelly</h3>
+            <div class="star-rating static" data-rating="3.5"></div>
+            <p class="short-desc">A cool burst of citrus and jelly refreshment.</p>
+            <button class="add-to-cart"><a href="./html/ice-jelly.html">View Product</a></button>
+            </div>
+
+            <!--Rosella Drip-->
+            <div class="juice-card rosella-drip">
+                <div class="juice-img">
+                <img src="./Images/rosella-drip-1.png" alt="Rosella Drip">
+                <div class="juice-overlay rosella-drip-overlay">
+                <p>Packed with antioxidants to energize your body, revitalize your skin, and keep your heart happy.</p>
+                </div>
+            </div>
+
+            <h3>Rosella Drip</h3>
+            <div class="star-rating static" data-rating="5"></div>
+            <p class="short-desc">Tart, floral, and refreshingly pink.</p>
+            <button class="add-to-cart"><a href="./html/rosella-drip.html">View Product</a></button>
+            </div>
+
+            <!--Goji Berry Mix-->
+            <div class="juice-card goji-berry">
+                <div class="juice-img">
+                <img src="./Images/goji-berry-edit.png" alt="Goji Berry Mix">
+                <div class="juice-overlay goji-berry-overlay">
+                <p>Goji, dates, and dried longan come together to nourish your skin, ease period pain, and protect against UV damage. (No sugar)</p>
+                </div>
+            </div>
+
+            <h3>Goji Berry Mix</h3>
+            <div class="star-rating static" data-rating="4.5"></div>
+            <p class="short-desc">A sweet and natural fruity glow in every sip.</p>
+            <button class="add-to-cart"><a href="./html/goji-berry-mix.html">View Product</a></button>
+            </div>
+
+            <!--Pinepapple Twist-->
+            <div class="juice-card pineapple-twist">
+            <div class="juice-img">
+                <img src="./Images/pineapple-twist.png" alt="Pineapple Twist">
+                <div class="juice-overlay pineapple-twist-overlay">
+                <p>A zesty blend of pineapple, lemon, and mint to freshen your breath, boost appetite, and help fight oral bacteria. (No sugar)</p>
+                </div>
+            </div>
+
+            <h3>Pineapple Twist</h3>
+            <div class="star-rating static" data-rating="4"></div>
+            <p class="short-desc">Tastes like a tropical sunshine in a sunny day.</p>
+            <button class="add-to-cart"><a href="./html/pineapple-twist.html">View Product</a></button>
+            </div>
+
+            <!--Cucumber Lime-->
+            <div class="juice-card cucumber-lime">
+            <div class="juice-img">
+                <img src="./Images/cucumber-lime-2.png" alt="Cucumber Lime">
+                <div class="juice-overlay cucumber-lime-overlay">
+                <p>Infused with cucumber, lime, and mint to hydrate deeply, strengthen hair, and keep your mind sharp.</p>
+                </div>
+            </div>
+
+            <h3>Cucumber Lime</h3>
+            <div class="star-rating static" data-rating="4"></div>
+            <p class="short-desc">Cool, crisp, and rejuvenating for skin.</p>
+            <button class="add-to-cart"><a href="./html/cucumber-lime.html">View Product</a></button>
+            </div>
+
+            <!--Cinammon Brew-->
+            <div class="juice-card cinammon-brew">
+            <div class="juice-img">
+                <img src="./Images/cinammon-brew-1.png" alt="Cinammon Brew">
+                <div class="juice-overlay cinammon-brew-overlay">
+                <p>A soothing mix of cinnamon and lemongrass that boosts antioxidants, balances blood sugar, and refreshes your breath.</p>
+                </div>
+            </div>
+
+
+            <h3>Cinammon Brew</h3>
+            <div class="star-rating static" data-rating="4"></div>
+            <p class="short-desc">Refreshing spices that boost your mood.</p>
+            <button class="add-to-cart"><a href="./html/cinammon-brew.html">View Product</a></button>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn next">❯</button>
+        </section>
+
+        <!--Script for Juice Section-->
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".carousel-track");
+        const container = track.parentElement; // the element that contains .carousel-track
+        const cards = Array.from(track.children);
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+
+        let index = 0;
+        let cardWidth = 0;
+        let gap = 0;
+        let visibleCards = 1;
+        let maxIndex = 0;
+        let startOffset = 0;
+
+        function calcSizes() {
+            if (!cards.length) return;
+            // read computed gap (flex gap), fallback to marginRight
+            const trackStyle = getComputedStyle(track);
+            gap = parseFloat(trackStyle.gap || trackStyle.columnGap) || 0;
+            if (!gap) {
+            // fallback: assume margin-right on card
+            const cardStyle = getComputedStyle(cards[0]);
+            gap = parseFloat(cardStyle.marginRight) || 32;
+            }
+
+            const singleCardRect = cards[0].getBoundingClientRect();
+            cardWidth = Math.round(singleCardRect.width + gap);
+
+            visibleCards = Math.max(1, Math.floor(container.offsetWidth / cardWidth));
+            maxIndex = Math.max(0, cards.length - visibleCards);
+
+            // calculate centered start offset so visible block is centered in container
+            startOffset = Math.round((container.offsetWidth - visibleCards * cardWidth) / 2);
+
+            // clamp index
+            if (index > maxIndex) index = maxIndex;
+        }
+
+        function updateTrack() {
+            calcSizes();
+            const translateX = startOffset - index * cardWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+            updateButtons();
+            highlightCenterCard();
+        }
+
+        function updateButtons() {
+            if (prevBtn) prevBtn.disabled = (index <= 0);
+            if (nextBtn) nextBtn.disabled = (index >= maxIndex);
+            // optional visual disabled look
+            if (prevBtn) prevBtn.classList.toggle("disabled", index <= 0);
+            if (nextBtn) nextBtn.classList.toggle("disabled", index >= maxIndex);
+        }
+
+        function highlightCenterCard() {
+            // Optional: add class to the 'center' card so CSS can scale it
+            cards.forEach(c => c.classList.remove("is-center"));
+            const centerIndex = Math.min(cards.length - 1, Math.floor(index + visibleCards / 2));
+            if (cards[centerIndex]) cards[centerIndex].classList.add("is-center");
+        }
+
+        // Next / Prev handlers (move by 1 card)
+        if (nextBtn) nextBtn.addEventListener("click", () => {
+            if (index < maxIndex) {
+            index = Math.min(maxIndex, index + 1);
+            updateTrack();
+            }
+        });
+
+        if (prevBtn) prevBtn.addEventListener("click", () => {
+            if (index > 0) {
+            index = Math.max(0, index - 1);
+            updateTrack();
+            }
+        });
+
+        // center on load and recalc on resize (debounced)
+        window.addEventListener("load", updateTrack);
+        let rTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(rTimer);
+            rTimer = setTimeout(updateTrack, 120);
+        });
+
+        // init
+        updateTrack();
+        });
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.star-rating.static').forEach(el => {
+            // Read data-rating attribute (supports decimals like "3.5")
+            const rating = parseFloat(el.getAttribute('data-rating')) || 0;
+            // Clamp between 0 and 5
+            const clamped = Math.max(0, Math.min(5, rating));
+            const percent = (clamped / 5) * 100;
+            // Set the CSS variable with percent unit
+            el.style.setProperty('--rating-percent', percent + '%');
+        });
+        });
+        </script>
+    </div>
+
+    <div style="background: #F4F1ED" class="svg-footer-wave">
+    <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    </svg>
+    </div>
+
+
+    <footer class="footer">
+
+    <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 1440 320"
+    xmlns="http://www.w3.org/2000/svg"
+    style="background: transparent;"
+    class="wave-divider"
+    >
+    <defs>
+        <linearGradient id="waveGradient" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#00b4db" />
+        <stop offset="100%" stop-color="#0083b0" />
+        </linearGradient>
+    </defs>
+
+    <path
+        fill="#B8E1EB"
+        d="M0,160
+        C180,220 360,100 540,180
+        C720,260 900,60 1080,160
+        C1260,260 1440,120 1440,120
+        L1440,320 L0,320 Z"
+    />
+    </svg>
+
+    <div class="footer-container">
+        <div class="footer-left">
+        <h2 class="gotham">Link's Lab</h2>
+        <p>Refreshing your day, one sip at a time. All natural and healthy drinks.</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+
+        <div class="footer-links">
+        <div>
+            <h4>Explore</h4>
+            <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/products.html">Drinks</a></li>
+            <li><a href="./html/about-us.html">Our Story</a></li>
+            <li><a href="./html/locations.html">Locations</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <ul>
+            <li><a href="./html/faq.html">FAQs</a></li>
+            <li><a href="./html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+            <a href="https://www.instagram.com/linkslab.drinks/" class="social">
+                <img src="./Images/Instagram_icon.png.webp" alt="Instagram Icon">
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Link's Lab. Freshly made with love.</p>
+    </div>
+    </footer>
+</body>
+</html>

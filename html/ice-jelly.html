@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../drinks.css">
+    <title>Link's Lab</title>
+</head>
+<body>
+    <nav>
+    <div class="nav-left">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/products.html">Products</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center">
+        <h3 class="gotham">Link's Lab</h3>
+    </div>
+
+    <div class="nav-right">
+        <ul>
+        <li><a href="../html/about-us.html">About Us</a></li>
+        <li><a href="../html/locations.html" class="btn-nav">Locations</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="main-container-bg">
+    <section class="product-page">
+
+        <div class="overlay-supergraphics"><img src="../Images/left-overlay.png"></div>
+        <div class="graphics-right"><img src="../Images/right-overlay.png"></div>
+
+        <div class="product-container">
+        <div class="product-image">
+            <img src="../Images/ice-jelly.jpg" alt="Ice Jelly" />
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">Ice Jelly</h1>
+            <div class="product-rating">
+            <div class="star-rating static" data-rating="3.5"></div>
+            <span class="reviews">(124 reviews)</span>
+            </div>
+            <p class="product-description">
+            Brightens your skin, soothes your throat, and cools you down from the inside out.
+            </p>
+            <button class="submit-review-button"><a href="./submit-review.html">Submit a Review</a></button>
+        </div>
+        </div>
+
+        <div class="product-details">
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+            <li>Seaweed jelly</li>
+            <li>Lime</li>
+            <li>Rock Sugar</li>
+            </ul>
+        </div>
+
+        <div class="benefits">
+            <h2>Benefits</h2>
+            <ul>
+            <li>Refreshes and brightens the skin</li>
+            <li>Relieves sore throat</li>
+            <li>Helps soothes the body</li>
+            </ul>
+        </div>
+
+        <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+            <h3>Ice Jelly</h3>
+            <p class="review">
+                “So refreshing! I drink this after every workout, just the right amount of sweetness!”
+            </p>
+            <div class="stars">★★★★☆</div>
+            <p class="author">— Rina S.</p>
+            </div>
+
+            <div class="testimonial-card">
+            <h3>Ice Jelly</h3>
+            <p class="review">
+                “Helped ease my sore throat, I love this drink!”
+            </p>
+            <div class="stars">★★★★☆</div>
+            <p class="author">— Kevin A.</p>
+            </div>
+        </div>
+        </section>
+        </div>
+
+                <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.star-rating.static').forEach(el => {
+            // Read data-rating attribute (supports decimals like "3.5")
+            const rating = parseFloat(el.getAttribute('data-rating')) || 0;
+            // Clamp between 0 and 5
+            const clamped = Math.max(0, Math.min(5, rating));
+            const percent = (clamped / 5) * 100;
+            // Set the CSS variable with percent unit
+            el.style.setProperty('--rating-percent', percent + '%');
+        });
+        });
+        </script>
+
+    </section>
+    </div>
+            
+    <div class="overlay-supergraphics-bottom"><img src="../Images/bottom-supergraphics.png"></div>
+
+    <footer class="footer">
+        <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        style="background: transparent;"
+        class="wave-divider"
+        >
+        <defs>
+            <linearGradient id="waveGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#00b4db" />
+            <stop offset="100%" stop-color="#0083b0" />
+            </linearGradient>
+        </defs>
+
+        <path
+            fill="#B8E1EB"
+            d="M0,160
+            C180,220 360,100 540,180
+            C720,260 900,60 1080,160
+            C1260,260 1440,120 1440,120
+            L1440,320 L0,320 Z"
+        />
+        </svg>
+
+    <div class="footer-container">
+        <div class="footer-left">
+        <h2 class="gotham">Link's Lab</h2>
+        <p>Refreshing your day, one sip at a time. All natural and healthy drinks.</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+
+        <div class="footer-links">
+        <div>
+            <h4>Explore</h4>
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/products.html">Drinks</a></li>
+            <li><a href="../html/about-us.html">Our Story</a></li>
+            <li><a href="../html/locations.html">Locations</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <ul>
+            <li><a href="../html/faq.html">FAQs</a></li>
+            <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+            <a href="https://www.instagram.com/linkslab.drinks/" class="social">
+                <img src="../Images/Instagram_icon.png.webp" alt="Instagram Icon">
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Link's Lab. Freshly made with love.</p>
+    </div>
+    </footer>
+</body>

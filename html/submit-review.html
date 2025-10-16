@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../submit-review.css">
+    <title>Link's Lab</title>
+</head>
+<body>
+    <nav>
+    <div class="nav-left">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/products.html">Products</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center">
+        <h3 class="gotham">Link's Lab</h3>
+    </div>
+
+    <div class="nav-right">
+        <ul>
+        <li><a href="../html/about-us.html">About Us</a></li>
+        <li><a href="../html/locations.html" class="btn-nav">Locations</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="main-container-bg">
+        <div class="margin-thing"></div>
+          <main class="review-container">
+            <h1>Share Your Thoughts!</h1>
+            <p>We’d love to hear what you think about our drinks! Fill out the form below and help us improve your experience.</p>
+
+            <form class="review-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="drink">Drink Name</label>
+            <select id="rating" name="rating" required>
+                <option value="">Choose drink name</option>
+                <option value="5">Ice Jelly</option>
+                <option value="4">Rosella Drip</option>
+                <option value="3">Goji Berry Mix</option>
+                <option value="2">Pineapple Twist</option>
+                <option value="1">Cucumber Lime</option>
+                <option value="1">Cinammon Brew</option>
+            </select>
+
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" required>
+                <option value="">Choose a rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Great</option>
+                <option value="3">⭐⭐⭐ Average</option>
+                <option value="2">⭐⭐ Not great</option>
+                <option value="1">⭐ Terrible</option>
+            </select>
+
+            <label for="review">Your Review</label>
+            <textarea id="review" name="review" rows="5" placeholder="Share your experience..." required></textarea>
+
+            <button type="submit" class="submit-review-button">Submit Review</button>
+            </form>
+    </div>
+            
+    <div class="overlay-supergraphics-bottom"><img src="../Images/bottom-supergraphics.png"></div>
+
+    <footer class="footer">
+        <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        style="background: transparent;"
+        class="wave-divider"
+        >
+        <defs>
+            <linearGradient id="waveGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#00b4db" />
+            <stop offset="100%" stop-color="#0083b0" />
+            </linearGradient>
+        </defs>
+
+        <path
+            fill="#B8E1EB"
+            d="M0,160
+            C180,220 360,100 540,180
+            C720,260 900,60 1080,160
+            C1260,260 1440,120 1440,120
+            L1440,320 L0,320 Z"
+        />
+        </svg>
+
+    <div class="footer-container">
+        <div class="footer-left">
+        <h2 class="gotham">Link's Lab</h2>
+        <p>Refreshing your day, one sip at a time. All natural and healthy drinks.</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+
+        <div class="footer-links">
+        <div>
+            <h4>Explore</h4>
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/products.html">Drinks</a></li>
+            <li><a href="../html/about-us.html">Our Story</a></li>
+            <li><a href="../html/locations.html">Locations</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <ul>
+            <li><a href="../html/faq.html">FAQs</a></li>
+            <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+            <a href="https://www.instagram.com/linkslab.drinks/" class="social">
+                <img src="../Images/Instagram_icon.png.webp" alt="Instagram Icon">
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Link's Lab. Freshly made with love.</p>
+    </div>
+    </footer>
+</body>

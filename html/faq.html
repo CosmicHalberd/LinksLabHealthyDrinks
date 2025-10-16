@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../faq.css">
+    <title>Link's Lab</title>
+</head>
+<body>
+    <nav>
+    <div class="nav-left">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/products.html">Products</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center">
+        <h3class="gotham">Link's Lab</h3>
+    </div>
+
+    <div class="nav-right">
+        <ul>
+        <li><a href="../html/about-us.html">About Us</a></li>
+        <li><a href="../html/locations.html" class="btn-nav">Locations</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="main-container-bg">
+        <!-- 🍹 FAQ Section -->
+        <section class="faq-section">
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Got questions? We’ve got your thirst for answers covered!</p>
+
+            <div class="faq-items">
+            <!-- Question 1 -->
+            <div class="faq-item">
+                <button class="faq-question">Are Link’s Lab drinks 100% natural?</button>
+                <div class="faq-answer">
+                <p>
+                    Yep! Every drink we make is made from real fruits, herbs, and ingredients.. no artificial flavors, 
+                    colors, or preservatives. All natural, delicious goodness in every sip!
+                </p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+                <button class="faq-question">Where can I buy your drinks?</button>
+                <div class="faq-answer">
+                <p>
+                    You can buy our drinks at any of our physical locations (check out our Locations page for details). We 
+                    currently do not offer online ordering outside of our partner outlet which is Crunchaus in Galaxy Mall 3.
+                </p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+                <button class="faq-question">Do your juices contain added sugar?</button>
+                <div class="faq-answer">
+                <p>
+                    Some drinks do contain non-artificial sugar, it's detailed in the drinks description as well as the ingredients. We try to use natural 
+                    sweeteners in our other drinks. Additional sugar added is kept to a minimum.
+                </p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item">
+                <button class="faq-question">How long do your drinks stay fresh?</button>
+                <div class="faq-answer">
+                <p>
+                    Since our juices are made from natural ingredients and contain no preservatives, 
+                    we recommend consuming them within 2-3 days. Keep them refrigerated to maintain freshness!
+                </p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+                <button class="faq-question">Can I request custom blends?</button>
+                <div class="faq-answer">
+                <p>
+                    Unfortunately, custome blends are not available at this time. We will update you if this changes in the future!
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <script>
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        question.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            // Close all other items
+            faqItems.forEach((i) => {
+            i.classList.remove("active");
+            const ans = i.querySelector(".faq-answer");
+            ans.style.maxHeight = null;
+            ans.style.paddingBottom = "0";
+            });
+
+            // Toggle the clicked one
+            if (!isActive) {
+            item.classList.add("active");
+            // Wait a tick to allow maxHeight animation to calculate correctly
+            answer.style.paddingBottom = "1.5rem";
+            answer.style.maxHeight = answer.scrollHeight + 24 + "px"; // 24px ≈ 1.5rem
+            } else {
+            item.classList.remove("active");
+            answer.style.maxHeight = null;
+            answer.style.paddingBottom = "0";
+            }
+        });
+        });
+        </script>
+    </div>
+            
+    <div class="overlay-supergraphics-bottom"><img src="../Images/bottom-supergraphics.png"></div>
+
+    <footer class="footer">
+        <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        style="background: transparent;"
+        class="wave-divider"
+        >
+        <defs>
+            <linearGradient id="waveGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#00b4db" />
+            <stop offset="100%" stop-color="#0083b0" />
+            </linearGradient>
+        </defs>
+
+        <path
+            fill="#B8E1EB"
+            d="M0,160
+            C180,220 360,100 540,180
+            C720,260 900,60 1080,160
+            C1260,260 1440,120 1440,120
+            L1440,320 L0,320 Z"
+        />
+        </svg>
+
+    <div class="footer-container">
+        <div class="footer-left">
+        <h2 class="gotham">Link's Lab</h2>
+        <p>Refreshing your day, one sip at a time. All natural and healthy drinks.</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+
+        <div class="footer-links">
+        <div>
+            <h4>Explore</h4>
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/products.html">Drinks</a></li>
+            <li><a href="../html/about-us.html">Our Story</a></li>
+            <li><a href="../html/locations.html">Locations</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <ul>
+            <li><a href="../html/faq.html">FAQs</a></li>
+            <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+            <a href="https://www.instagram.com/linkslab.drinks/" class="social">
+                <img src="../Images/Instagram_icon.png.webp" alt="Instagram Icon">
+            </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Link's Lab. Freshly made with love.</p>
+    </div>
+    </footer>
+</body>
