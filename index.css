@@ -79,7 +79,7 @@ nav a:hover {
 
 .overlay-supergraphics {
   position: absolute;
-  top: 1225px;
+  top: 128vh;
   left: 0;
   height: 100%;
   position: absolute;
@@ -98,7 +98,7 @@ nav a:hover {
 
 .overlay-supergraphics-bottom{
   position: absolute;
-  top: 2595px;
+  top: 278vh;
   left: 0;
   height: 100%;
   position: absolute;
@@ -660,4 +660,5 @@ svg {
 
 .footer .gotham{
   font-family: 'Gotham', sans-serif;
+
 }
