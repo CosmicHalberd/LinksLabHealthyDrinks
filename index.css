@@ -249,6 +249,15 @@ svg {
   font-family: 'Fredoka', sans-serif;
 }
 
+@media screen and (min-width: 1900px) and (max-width: 1920px) and (min-height: 1070px) and (max-height: 1080px) {
+  .juice-section {
+    background: linear-gradient(180deg, rgba(255, 253, 235, 1), #F4F1ED 100%);
+    padding: 12rem 0 16rem;
+    height: auto;
+    font-family: 'Fredoka', sans-serif;
+  }
+}
+
 .juice-carousel {
   position: relative;
   max-width: 100%;
@@ -544,6 +553,7 @@ svg {
   z-index:10;
 }
 
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -663,4 +673,5 @@ svg {
   font-family: 'Gotham', sans-serif;
 
 }
+
 
